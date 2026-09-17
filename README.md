@@ -15,16 +15,14 @@ UN_Comtrade/
 ├── fetch_chips/
 │   ├── fetch_api.py             # API 包调用脚本
 │   ├── fetch_url.py             # 直接请求 URL 的脚本
-│   ├── fetch_url copy.py        # 历史副本
 │   ├── test_fetch_bilateral.py  # 旧版实现的测试文件，当前不作为运行入口
-│   ├── reporters.csv           # 本地报告国名单，不上传
-│   ├── partners.csv            # 本地贸易伙伴参考名单，不上传
-│   └── data/                   # 本地结果目录，不上传
+│   ├── reporters.csv           # 本地报告国名单
+│   └── data/                   
 ├── fetch_robots/
 │   ├── fetch.py                # 机器人出口数据脚本
 │   ├── fetch copy.py           # 历史副本
-│   ├── reporters.csv           # 本地报告国名单，不上传
-│   └── data/                   # 本地结果目录，不上传
+│   ├── reporters.csv
+│   └── data/               
 ├── .gitignore
 ├── README.md
 └── requirements.txt
