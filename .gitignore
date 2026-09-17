@@ -172,3 +172,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 .streamlit/secrets.toml
+
+# 上传研究用CSV名单；data结果目录仍保持忽略
+!/fetch_chips/**/*.csv
+!/fetch_robots/**/*.csv
+/fetch_chips/data/
+/fetch_robots/data/

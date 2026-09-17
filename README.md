@@ -17,20 +17,20 @@ UN_Comtrade/
 │   ├── fetch_url.py             # 直接请求 URL 的脚本
 │   ├── fetch_url copy.py        # 历史副本
 │   ├── test_fetch_bilateral.py  # 旧版实现的测试文件，当前不作为运行入口
-│   ├── reporters.csv           # 本地报告国名单，不上传
-│   ├── partners.csv            # 本地贸易伙伴参考名单，不上传
+│   ├── reporters.csv           # 报告国名单，随项目上传
+│   ├── partners.csv            # 贸易伙伴参考名单，随项目上传
 │   └── data/                   # 本地结果目录，不上传
 ├── fetch_robots/
 │   ├── fetch.py                # 机器人出口数据脚本
 │   ├── fetch copy.py           # 历史副本
-│   ├── reporters.csv           # 本地报告国名单，不上传
+│   ├── reporters.csv           # 报告国名单，随项目上传
 │   └── data/                   # 本地结果目录，不上传
 ├── .gitignore
 ├── README.md
 └── requirements.txt
 ```
 
-GitHub 仓库保留代码、说明及依赖配置；CSV 名单、下载结果、缓存、日志、虚拟环境和密钥保留在本地。目录树中的本地数据文件需要自行准备，不会随克隆获得。
+GitHub 仓库保留代码、说明、依赖配置，以及 `fetch_chips/` 和 `fetch_robots/` 中位于 `data/` 之外的 CSV 名单。`data/` 内的结果、缓存、日志、虚拟环境和密钥保留在本地，不会随克隆获得。
 
 ## 当前脚本说明
 
@@ -180,11 +180,11 @@ New-Item -ItemType Directory -Force .\fetch_chips\data | Out-Null
 
 - `.venv/`、IDE 设置、Python 缓存等运行环境文件。
 - `.env`、密钥文件及错误日志。
-- 全部 CSV（包含 `reporters.csv`、`partners.csv`）、Excel 和 Parquet 文件。
+- `data/` 内的 CSV 结果、Excel 和 Parquet 文件；`fetch_chips/` 和 `fetch_robots/` 中位于 `data/` 之外的 CSV（如 `reporters.csv`、`partners.csv`）随项目上传。
 - `data/`、`output/`、`outputs/`、`result/`、`results/`、`uncomtrade_data/` 等结果目录，以及批次缓存目录。
 - JSONL、Feather、Pickle、HDF5、Stata、数据库及压缩下载结果等文件。
 
-结果文件不会随项目上传；克隆后需自行准备报告国名单和密钥，并创建输出目录。`comtradeapicall/` 保留第三方源码、示例和许可证，其内层 Git 历史不作为项目文件上传。
+结果文件不会随项目上传；克隆后可使用仓库中的报告国名单，需自行配置密钥并创建输出目录。`comtradeapicall/` 保留第三方源码、示例和许可证，其内层 Git 历史不作为项目文件上传。
 
 ## 参考资料
 
