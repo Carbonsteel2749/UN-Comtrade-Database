@@ -15,7 +15,6 @@ UN_Comtrade/
 ├── fetch_chips/
 │   ├── fetch_api.py             # API 包调用脚本
 │   ├── fetch_url.py             # 直接请求 URL 的脚本
-│   ├── fetch_url copy.py        # 历史副本
 │   ├── test_fetch_bilateral.py  # 旧版实现的测试文件，当前不作为运行入口
 │   ├── reporters.csv           # 报告国名单，随项目上传
 │   ├── partners.csv            # 贸易伙伴参考名单，随项目上传
